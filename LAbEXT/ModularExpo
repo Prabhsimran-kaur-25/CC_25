@@ -1,0 +1,17 @@
+class Solution
+{
+	public:
+		long long int powMod(long long int x,long long int n,long long int M)
+		{
+		    long long int ans=1;
+            x%=M;
+            while (n>0)
+            {
+                if (n%2==1)
+                    ans=(ans*x)%M;
+                n>>=1;
+                x=(x*x)%M;
+            }
+            return ans;
+		}
+};
